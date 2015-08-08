@@ -1,14 +1,7 @@
 #!/bin/bash
 
 echo "Searching for changes in tracked files..."
-git diff --exit-code --quiet
-if [ $? = 1 ]
-then
-  echo "There are uncommited changes"
-else
-  echo "There aren't any uncommited changes"
-fi
-git diff --cached
+git diff --exit-code --quiet --cached
 if [ $? = 1 ]
 then
   echo "There are uncommited changes"
