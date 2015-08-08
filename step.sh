@@ -3,7 +3,7 @@
 echo "Searching for changes in tracked files..."
 TEST=$(git status --porcelain)
 if [ -n "$TEST" ] ; then
-  echo "There are uncommited new files"
+  echo "There are uncommited files"
 else
-  echo "There aren't any uncommited new files"
+  echo "There aren't any uncommited files"
 fi
